@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.dao.websMapper" >
+
+    <select id="select" resultType="com.example.demo.entity.webs">
+    select * from webs where mainid=#{mainid} and laiyuan=#{laiyuan}
+</select>
+
+    <insert id="addWeb">
+    insert webs values (default ,#{mainid},#{laiyuan},#{current})
+</insert>
+
+
+
+
+
+</mapper>

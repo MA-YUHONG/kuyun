@@ -1,0 +1,13 @@
+com\example\demo\service\okService.class
+com\example\demo\dao\mainMapper.class
+com\example\demo\dao\urldizhiMapper.class
+com\example\demo\entity\urldizhi.class
+com\example\demo\application.class
+com\example\demo\entity\main.class
+com\example\demo\entity\webs.class
+com\example\demo\service\kuyunService.class
+com\example\demo\core\autoJob.class
+com\example\demo\service\downloadImgService.class
+com\example\demo\tool\tools.class
+com\example\demo\controller\test.class
+com\example\demo\dao\websMapper.class
