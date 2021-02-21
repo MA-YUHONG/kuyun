@@ -59,11 +59,11 @@ public class okService {
         final String startime = df.format(new Date());
         System.out.println("开始时间" + startime);
         for (int i = start; i <= end; ++i) {
-            String url = "http://www.jisudhw.com/?m=vod-index-pg-" + i + ".html";
+            String url = "http://www.okzyw.net/?m=vod-index-pg-" + i + ".html";
             String ret = Get(url);
             if (ret == null) {
                 System.out.println("x");
-                url = "http://www.jisudhw.com/?m=vod-index-pg-" + i + ".html";
+                url = "http://www.okzyw.net/?m=vod-index-pg-" + i + ".html";
                 ret = Get(url);
             }
             final Pattern pattern = Pattern.compile("_vb4\"><a href=\"(.*?)\" target=");
@@ -72,11 +72,11 @@ public class okService {
                 matcher = pattern.matcher(ret);
             } catch (Exception e) {
                 System.out.println("x");
-                url = "http://www.jisudhw.com/?m=vod-index-pg-" + i + ".html";
+                url = "http://www.okzyw.net/?m=vod-index-pg-" + i + ".html";
                 ret = Get(url);
             }
             while (matcher.find()) {
-                final String url2 = "http://www.jisudhw.com/" + matcher.group().substring(15, matcher.group().length() - 9);
+                final String url2 = "http://www.okzyw.net/" + matcher.group().substring(15, matcher.group().length() - 9);
                 this.godown(url2);
             }
             System.out.println(i + "页完毕");

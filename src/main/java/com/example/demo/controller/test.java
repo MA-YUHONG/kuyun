@@ -30,6 +30,7 @@ public class test {
     @ResponseBody
     public void index1(@PathVariable("start") final int start, @PathVariable("end") final int end) throws IOException {
 
+
         System.out.println("酷云资源");
         try {
             this.kuyunService.start(start, end);
@@ -37,15 +38,14 @@ public class test {
             e.printStackTrace();
         }
 
+
+
         System.out.println("ok资源");
         try {
             this.okService.start(start, end);
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
-
     }
 
     @RequestMapping({"/one"})
